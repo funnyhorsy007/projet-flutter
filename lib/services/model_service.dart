@@ -4,14 +4,14 @@ class ModelService {
   Future<void> loadModel() async {
     await Tflite.loadModel(
       model:
-          "assets/model.tflite", // Assurez-vous d'ajouter le fichier dans le dossier assets.
-      labels: "assets/label.txt", // Ajoutez également le fichier des labels.
+          "assets/model.tflite",
+      labels: "assets/label.txt",
     );
   }
 
   Future<List?> predict(String imagePath) async {
     var predictions = await Tflite.runModelOnImage(
-      path: imagePath, // Chemin de l'image à analyser
+      path: imagePath,
       imageMean: 0.0,
       imageStd: 255.0,
       numResults: 10,

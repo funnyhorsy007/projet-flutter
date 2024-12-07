@@ -27,10 +27,10 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   CircleAvatar(
                     radius: 40,
-                    backgroundImage: AssetImage('assets/profile/profile.jpeg'),
+                    backgroundImage: AssetImage('assets/profile/photo.jpg'),
                   ),
                   SizedBox(height: 8),
-                  Text('Younesse', style: TextStyle(color: Colors.white)),
+                  Text('Oussama', style: TextStyle(color: Colors.white)),
                 ],
               ),
             ),

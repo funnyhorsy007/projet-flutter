@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -48,17 +47,27 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             _createDrawerItem(
+              icon: Icons.cloud, // Icône pour la météo
+              text: 'Weather', // Texte pour l'élément de menu
+              onTap: () => Navigator.pushNamed(context, '/metheo'),
+            ),
+            _createDrawerItem(
               icon: Icons.settings,
               text: 'Settings',
               onTap: () {
                 // Navigate to settings page
               },
             ),
+            _createDrawerItem(
+              icon: Icons.settings,
+              text: 'model_ann',
+              onTap: () => Navigator.pushNamed(context, '/ann'),
+            ),
             const Divider(),
             _createDrawerItem(
               icon: Icons.logout,
               text: 'Logout',
-             onTap: () => Navigator.pushNamed(context, '/login'),
+              onTap: () => Navigator.pushNamed(context, '/login'),
             ),
           ],
         ),
@@ -78,11 +87,11 @@ class _HomePageState extends State<HomePage> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
+            child: const Padding(
+              padding: EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
                     'Welcome to the Home Page!',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:younesse/screens/ann.dart';
 
 import 'screens/home_page.dart';
 import 'screens/login_page.dart';
 import 'screens/register_page.dart';
+import 'screens/metheo_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +28,8 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LoginPage(),
         '/register': (context) => RegisterPage(),
         '/home': (context) => HomePage(),
+        '/metheo': (context) => WeatherPage(),
+        '/ann': (context) => Ann(),
       },
       initialRoute: '/login',
     );
